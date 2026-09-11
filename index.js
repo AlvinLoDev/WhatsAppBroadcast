@@ -6,13 +6,7 @@ const path = require("path");
 const sessionDir = path.join(__dirname, "session");
 const nomorPath = path.join(__dirname, "numbers.txt");
 const logPath = path.join(__dirname, "broadcast.log");
-const defaultNomorList = [
-    "87855212057",
-    "82144011410",
-    "85883686051",
-    "83124443366",
-    "81347480223"
-];
+
 
 function writeLog(message) {
     const timestamp = new Date().toISOString();
