@@ -42,18 +42,12 @@ function loadNomorList() {
             .map(normalizeNomor)
             .filter(Boolean);
 
-        if (list.length > 0) return [...new Set(list)];
+            if (list.length > 0) return [...new Set(list)];
     } catch (error) {
-        console.log("File numbers.txt tidak ditemukan. Menggunakan daftar default.");
+            console.log("File numbers.txt tidak ditemukan.");
     }
 
-    const fallbackList = defaultNomorList
-        .map(normalizeNomor)
-        .filter(Boolean);
-
-    if (fallbackList.length > 0) return [...new Set(fallbackList)];
-
-    return ["628979728413"];
+            return [];
 }
 
 const client = new Client({
